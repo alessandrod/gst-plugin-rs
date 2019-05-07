@@ -1,0 +1,22 @@
+[package]
+name = "gst-plugin-ts"
+version = "0.1.0"
+authors = ["Alessandro Decina <alessandro.d@gmail.com>"]
+repository = "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs"
+license = "MIT/Apache-2.0"
+edition = "2018"
+
+[dependencies]
+url = "1.1"
+glib = { git = "https://github.com/gtk-rs/glib" }
+gstreamer = { git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs", features = ["subclassing"] }
+gstreamer-base = { git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
+nuts = { git = "https://github.com/alessandrod/nuts" }
+num-rational = { version = "0.2", default-features = false, features = [] }
+lazy_static = "1.0"
+smallvec = "0.6"
+
+[lib]
+name = "gstrsts"
+crate-type = ["cdylib"]
+path = "src/lib.rs"
